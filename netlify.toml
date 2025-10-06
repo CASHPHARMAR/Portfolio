@@ -1,0 +1,59 @@
+# Netlify configuration for Calvin Selassie's Portfolio Website
+# Documentation: https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  # Publish directory (root directory since files are in root)
+  publish = "."
+  
+  # No build command needed for static HTML sites
+  # command = ""
+
+# Security headers for better protection
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache headers for CSS files (1 year cache)
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache headers for JavaScript files (1 year cache)
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache headers for images (1 year cache)
+[[headers]]
+  for = "/attached_assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache headers for fonts (1 year cache)
+[[headers]]
+  for = "/*.woff"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Production environment settings
+[context.production]
+  publish = "."
+
+# Deploy preview settings
+[context.deploy-preview]
+  publish = "."
+
+# Branch deploy settings
+[context.branch-deploy]
+  publish = "."
