@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio website of Calvin Selassie (CashPharmar) - Aspiring Web Developer & AI Enthusiast">
+    <title>Calvin Selassie | CashPharmar - Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
+</head>
+<body>
+    <!-- Canvas for particle background -->
+    <canvas id="particles-canvas"></canvas>
+    
+    <!-- Gradient waves background -->
+    <div class="gradient-waves"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Animated Logo -->
+            <div class="logo">
+                <svg class="logo-svg" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#00f5ff;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#a855f7;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <text x="5" y="35" font-family="Poppins, sans-serif" font-size="28" font-weight="700" fill="url(#logo-gradient)">CashPharmar</text>
+                </svg>
+            </div>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#timeline" class="nav-link">Timeline</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Theme & Background Toggles -->
+            <div class="toggle-controls">
+                <button id="bg-toggle" class="toggle-btn" title="Toggle Background Animation">
+                    <span class="toggle-icon">🌊</span>
+                </button>
+                <button id="theme-toggle" class="toggle-btn" title="Toggle Dark/Light Mode">
+                    <span class="toggle-icon">🌙</span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Calvin Selassie</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    <span class="typing-text">Aspiring Web Developer & AI Enthusiast</span>
+                </h2>
+                <p class="hero-description">
+                    Also known as <span class="highlight">CashPharmar</span> - Building the future, one line of code at a time
+                </p>
+                <a href="#projects" class="cta-button">
+                    View My Projects
+                    <span class="button-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image-wrapper">
+                    <div class="profile-image-container">
+                        <img src="attached_assets/IMG-20250718-WA0005_1759766956927.jpg" alt="Calvin Selassie Profile" class="profile-image">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm <strong>Calvin Selassie</strong>, also known as <strong class="highlight">CashPharmar</strong>. 
+                        I love exploring technology, building creative projects, and combining programming with AI to solve real-world problems.
+                  
